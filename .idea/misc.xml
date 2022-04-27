@@ -2,9 +2,6 @@
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
-      <map>
-        <entry key="..\:/Users/OMISTAJA/AndroidStudioProjects/BirdSeer2/app/src/main/res/layout/activity_main.xml" value="0.264" />
-      </map>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
