@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BirdSeer</string>
+    <string name="buttonHavainnot">HAVAINNOT</string>
 </resources>
