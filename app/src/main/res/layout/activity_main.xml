@@ -51,4 +51,20 @@
         tools:layout_editor_absoluteX="177dp"
         tools:layout_editor_absoluteY="211dp" />
 
+    <Button
+        android:id="@+id/buttonlisaaLaji"
+        android:layout_width="324dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="23dp"
+        android:backgroundTint="#87CA89"
+        android:text="Lisää Laji"
+        android:textColor="#121111"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonHavainnot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
