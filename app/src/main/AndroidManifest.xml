@@ -10,6 +10,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BirdSeer">
         <activity
+            android:name=".elamanHavainnot"
+            android:exported="false" />
+        <activity
+            android:name=".vuodenHavainnot"
+            android:exported="false" />
+        <activity
+            android:name=".paivanHavainnot"
+            android:exported="false" />
+        <activity
+            android:name=".havaintoValikko"
+            android:exported="false" />
+        <activity
+            android:name=".info"
+            android:exported="false" />
+        <activity
+            android:name=".paivaSijainti"
+            android:exported="false" />
+        <activity
+            android:name=".valitseLajit"
+            android:exported="false" />
+        <activity
+            android:name=".mihinLajit"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
