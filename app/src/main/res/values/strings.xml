@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BirdSeer</string>
     <string name="buttonHavainnot">HAVAINNOT</string>
+    <string name="buttonLisääLaji">LISÄÄ LAJI</string>
 </resources>

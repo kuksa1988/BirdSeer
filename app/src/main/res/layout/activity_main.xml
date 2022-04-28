@@ -59,7 +59,7 @@
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="23dp"
         android:backgroundTint="#87CA89"
-        android:text="Lisää Laji"
+        android:text="@string/buttonLisääLaji"
         android:textColor="#121111"
         android:textSize="45sp"
         android:textStyle="bold"
