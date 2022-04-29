@@ -6,10 +6,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+
 public class valitseLajit extends AppCompatActivity {
 
     RecyclerView recyclerViewLajit;
-    String lajit[];
+    private ArrayList<String> lajitArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,14 +24,27 @@ public class valitseLajit extends AppCompatActivity {
 
 
 
-
         recyclerViewLajit = findViewById(R.id.recyclerViewLajit);
-        lajit = getResources().getStringArray(R.array.lajit);
+        lajitArrayList = new ArrayList<>();
 
-        MyadapterLajit myadapterLajit = new MyadapterLajit(this, lajit);
+        MyadapterLajit myadapterLajit = new MyadapterLajit(this, lajitArrayList);
         recyclerViewLajit.setAdapter(myadapterLajit);
         recyclerViewLajit.setLayoutManager(new LinearLayoutManager(this));
 
+        createListdata();
 
+
+    }
+
+    private void createListdata() {
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new InputStreamReader(getAssets().open("lajit.txt"), StandardCharsets.UTF_8));
+            String laji;
+            while((laji = br.readLine()) != null)
+            lajitArrayList.add(laji);
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }

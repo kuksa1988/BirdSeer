@@ -9,12 +9,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class MyadapterLajit extends RecyclerView.Adapter<MyadapterLajit.MyViewHolder> {
 
-    String data[];
+    private ArrayList<String> data;
     Context context;
 
-    public MyadapterLajit(Context ctx, String lajit[]){
+    public MyadapterLajit(Context ctx, ArrayList<String> lajit){
         context = ctx;
         data = lajit;
 
@@ -31,13 +33,13 @@ public class MyadapterLajit extends RecyclerView.Adapter<MyadapterLajit.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.myText.setText(data[position]);
+        holder.myText.setText(data.get(position));
 
     }
 
     @Override
     public int getItemCount() {
-        return data.length;
+        return data.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
