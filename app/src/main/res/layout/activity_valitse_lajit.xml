@@ -6,21 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".valitseLajit">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="118dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="16dp"
-        android:text="tähän tulee &quot;Valitse lajit listalta&quot;"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewLajit"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        android:background="@drawable/item_backgroundcolor"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
