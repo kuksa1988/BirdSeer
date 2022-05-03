@@ -5,8 +5,11 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -37,8 +40,22 @@ public class valitseLajit extends AppCompatActivity implements RecyclerViewInter
                 DividerItemDecoration.VERTICAL);
         recyclerViewLajit.addItemDecoration(dividerItemDecoration);
 
+        Button vahvistalajit = findViewById(R.id.button_lajivalintavahvista);
+
+        vahvistalajit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeActivityPaivaSijainti();
+            }
+        });
+
         createListdata();
 
+    }
+
+    private void changeActivityPaivaSijainti() {
+        Intent intent = new Intent(this, paivaSijainti.class);
+        startActivity(intent);
     }
 
     private void createListdata() {  //luetaan lajit assetseissa olevasta txt-tiedostosta arraylistiin

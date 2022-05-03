@@ -2,6 +2,7 @@
     <string name="app_name">BirdSeer</string>
     <string name="buttonHavainnot">HAVAINNOT</string>
     <string name="buttonLisääLaji">LISÄÄ LAJI</string>
+    <string name="button_lajivalintavahvista">OK</string>
     <string-array name="lajit">
         <item>varis</item>
         <item>harakka</item>
