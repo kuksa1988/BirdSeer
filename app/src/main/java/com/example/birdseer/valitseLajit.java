@@ -40,23 +40,10 @@ public class valitseLajit extends AppCompatActivity implements RecyclerViewInter
                 DividerItemDecoration.VERTICAL);
         recyclerViewLajit.addItemDecoration(dividerItemDecoration);
 
-        Button vahvistalajit = findViewById(R.id.button_lajivalintavahvista);
-
-        vahvistalajit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeActivityPaivaSijainti();
-            }
-        });
-
         createListdata();
 
     }
 
-    private void changeActivityPaivaSijainti() {
-        Intent intent = new Intent(this, paivaSijainti.class);
-        startActivity(intent);
-    }
 
     private void createListdata() {  //luetaan lajit assetseissa olevasta txt-tiedostosta arraylistiin
         BufferedReader br = null;
@@ -73,6 +60,7 @@ public class valitseLajit extends AppCompatActivity implements RecyclerViewInter
     @Override
     public void onItemClick(int position) {
         Toast.makeText(this, lajitArrayList.get(position), Toast.LENGTH_SHORT).show();
-        recyclerViewLajit.findViewById(R.id.my_row_lajinimi).setBackgroundColor(234234);
+        Intent intent = new Intent(this, paivaSijainti.class);
+        startActivity(intent);
     }
 }
