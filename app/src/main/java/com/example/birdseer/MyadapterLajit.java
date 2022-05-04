@@ -33,7 +33,6 @@ public class MyadapterLajit extends RecyclerView.Adapter<MyadapterLajit.MyViewHo
     @Override //luodaan recylcerviewin näkymä. view = my_row_lajit
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.my_row_lajit, parent, false);
         return new MyViewHolder(view, recyclerViewInterface);
@@ -59,16 +58,15 @@ public class MyadapterLajit extends RecyclerView.Adapter<MyadapterLajit.MyViewHo
         public MyViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             myText = itemView.findViewById(R.id.my_row_lajinimi);
-            //checkbox = itemView.findViewById(R.id.)
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if(recyclerViewInterface != null){
-                        int pos = getAdapterPosition();
+                        int pos = getAdapterPosition(); //klikattavan itemin positio
 
                         if(pos != RecyclerView.NO_POSITION){
-                            recyclerViewInterface.onItemClick(pos);
+                            recyclerViewInterface.onItemClick(pos); //klikatun itemin positio parametrina metodille
                         }
                     }
                 }

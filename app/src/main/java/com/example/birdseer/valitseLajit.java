@@ -5,8 +5,13 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -19,6 +24,7 @@ public class valitseLajit extends AppCompatActivity implements RecyclerViewInter
 
     RecyclerView recyclerViewLajit;
     private ArrayList<String> lajitArrayList;
+    public Havainto havainto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +47,7 @@ public class valitseLajit extends AppCompatActivity implements RecyclerViewInter
 
     }
 
+
     private void createListdata() {  //luetaan lajit assetseissa olevasta txt-tiedostosta arraylistiin
         BufferedReader br = null;
         try {
@@ -55,7 +62,9 @@ public class valitseLajit extends AppCompatActivity implements RecyclerViewInter
 
     @Override
     public void onItemClick(int position) {
-        Toast.makeText(this, lajitArrayList.get(position), Toast.LENGTH_SHORT).show();
-        recyclerViewLajit.findViewById(R.id.my_row_lajinimi).setBackgroundColor(234234);
+        havainto = new Havainto(lajitArrayList.get(position));
+        Intent intent = new Intent(this, paivaSijainti.class);
+        startActivity(intent);
+        Toast.makeText(this, havainto.getLaji(), Toast.LENGTH_SHORT).show();
     }
 }
