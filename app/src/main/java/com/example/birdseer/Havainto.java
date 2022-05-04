@@ -15,7 +15,6 @@ public class Havainto {
         this.kuukausi = kuukausi;
         this.vuosi = vuosi;
     }
-
     public Havainto(String laji) {
         this.laji = laji;
     }
