@@ -2,6 +2,10 @@
     <string name="app_name">BirdSeer</string>
     <string name="buttonHavainnot">HAVAINNOT</string>
     <string name="buttonLisääLaji">LISÄÄ LAJI</string>
+    <string name="LisaaPvm">Lisää Päivämäärä</string>
+    <string name="pp_kk_vvvv">pp/kk/vvvv</string>
+    <string name="valitse_sijainti">Valitse sijainti</string>
+    <string name="lisaa_sijainti">lisää sijainti</string>
     <string-array name="lajit">
         <item>varis</item>
         <item>harakka</item>
