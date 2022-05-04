@@ -15,9 +15,8 @@ public class Havainto {
         this.kuukausi = kuukausi;
         this.vuosi = vuosi;
     }
-
-    public Havainto() {
-
+    public Havainto(String laji) {
+        this.laji = laji;
     }
 
     public String getLaji() {
@@ -29,22 +28,42 @@ public class Havainto {
     }
 
     public int getPaiva() {
-
         return paiva;
     }
 
     public int getKuukausi() {
-
         return kuukausi;
     }
 
     public int getVuosi() {
-
         return vuosi;
     }
+}
 
-    public void setPaiva(int day) {
+    public void setLaji(String laji) {
+        this.laji = laji;
+    }
 
-        day = paiva;
+    public void setSijainti(String sijainti) {
+        this.sijainti = sijainti;
+    }
+
+    public void setPaiva(int paiva) {
+        this.paiva = paiva;
+    }
+
+    public void setKuukausi(int kuukausi) {
+        this.kuukausi = kuukausi;
+    }
+
+    public void setVuosi(int vuosi) {
+        this.vuosi = vuosi;
+    }
+
+    @Override
+    public String toString() {
+        return "Havainto{" +
+                "laji='" + laji + '\'' +
+                '}';
     }
 }
