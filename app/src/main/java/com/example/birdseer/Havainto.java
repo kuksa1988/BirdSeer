@@ -16,6 +16,10 @@ public class Havainto {
         this.vuosi = vuosi;
     }
 
+    public Havainto() {
+
+    }
+
     public String getLaji() {
         return laji;
     }
@@ -25,14 +29,22 @@ public class Havainto {
     }
 
     public int getPaiva() {
+
         return paiva;
     }
 
     public int getKuukausi() {
+
         return kuukausi;
     }
 
     public int getVuosi() {
+
         return vuosi;
+    }
+
+    public void setPaiva(int day) {
+
+        day = paiva;
     }
 }
