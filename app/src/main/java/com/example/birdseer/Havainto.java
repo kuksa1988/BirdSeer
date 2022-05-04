@@ -16,6 +16,10 @@ public class Havainto {
         this.vuosi = vuosi;
     }
 
+    public Havainto(String laji) {
+        this.laji = laji;
+    }
+
     public String getLaji() {
         return laji;
     }
@@ -34,5 +38,32 @@ public class Havainto {
 
     public int getVuosi() {
         return vuosi;
+    }
+
+    public void setLaji(String laji) {
+        this.laji = laji;
+    }
+
+    public void setSijainti(String sijainti) {
+        this.sijainti = sijainti;
+    }
+
+    public void setPaiva(int paiva) {
+        this.paiva = paiva;
+    }
+
+    public void setKuukausi(int kuukausi) {
+        this.kuukausi = kuukausi;
+    }
+
+    public void setVuosi(int vuosi) {
+        this.vuosi = vuosi;
+    }
+
+    @Override
+    public String toString() {
+        return "Havainto{" +
+                "laji='" + laji + '\'' +
+                '}';
     }
 }
