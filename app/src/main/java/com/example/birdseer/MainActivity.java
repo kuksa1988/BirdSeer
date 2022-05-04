@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    
+
     private void changeActivityLisaaLaji() {
         Intent intent = new Intent(this, valitseLajit.class);
         startActivity(intent);

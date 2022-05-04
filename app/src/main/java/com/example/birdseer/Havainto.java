@@ -38,7 +38,6 @@ public class Havainto {
     public int getVuosi() {
         return vuosi;
     }
-}
 
     public void setLaji(String laji) {
         this.laji = laji;
