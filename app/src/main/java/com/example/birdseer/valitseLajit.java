@@ -64,6 +64,7 @@ public class valitseLajit extends AppCompatActivity implements RecyclerViewInter
     public void onItemClick(int position) {
         havainto = new Havainto(lajitArrayList.get(position));
         Intent intent = new Intent(this, paivaSijainti.class);
+        intent.putExtra("laji", lajitArrayList.get(position));
         startActivity(intent);
         Toast.makeText(this, havainto.getLaji(), Toast.LENGTH_SHORT).show();
     }
