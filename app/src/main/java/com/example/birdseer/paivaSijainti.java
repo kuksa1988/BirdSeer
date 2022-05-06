@@ -90,9 +90,13 @@ public class paivaSijainti extends AppCompatActivity {
     }
 
     private void openMain() {
+
+        MyDatabaseHelper myDB = new MyDatabaseHelper(paivaSijainti.this);
+        myDB.lisaaLaji(getIntent().getStringExtra("laji"), sijainti, vuosi, kuukausi, paiva);
+
         Intent intent = new Intent(this, MainActivity.class);
-        String ilmoitus = "Ajaksi lisättiin: " + paiva + " " + kuukausi + " " + vuosi + ", Ja sijainniksi: " + sijainti + " Sekä lajina on: " + getIntent().getStringExtra("laji");
-        Toast.makeText(this, ilmoitus, Toast.LENGTH_SHORT).show();
+        //String ilmoitus = "Ajaksi lisättiin: " + paiva + " " + kuukausi + " " + vuosi + ", Ja sijainniksi: " + sijainti + " Sekä lajina on: " + getIntent().getStringExtra("laji");
+        //Toast.makeText(this, ilmoitus, Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 
