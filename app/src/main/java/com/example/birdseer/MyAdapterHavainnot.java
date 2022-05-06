@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MyAdapterHavainnot extends RecyclerView.Adapter<MyadapterLajit.MyViewHolder> {
+public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.MyViewHolder> {
 
     private Context context;
     private ArrayList<String> lajiNimiArraytList, sijaintiArrayList;
@@ -36,14 +36,14 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyadapterLajit.MyVi
 
     @NonNull
     @Override
-    public MyadapterLajit.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.my_row_havainnot, parent, false);
-        return new MyadapterLajit.MyViewHolder(view);
+        return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyadapterLajit.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.havaintoID_txt.setText(String.valueOf(idArrayList.get(position)));
         holder.havaittuLaji_txt.setText(String.valueOf(lajiNimiArraytList.get(position)));
         holder.paiva_txt.setText(String.valueOf(dayArrayList.get(position)));
