@@ -23,6 +23,10 @@ public class paivaSijainti extends AppCompatActivity {
     private TextView dateButton;
     private EditText locationButton;
     private Button confirmButton;
+    private int paiva;
+    private int kuukausi;
+    private int vuosi;
+    private String sijainti;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +37,6 @@ public class paivaSijainti extends AppCompatActivity {
         confirmButton = (Button) findViewById(R.id.lisaaLaji);
         confirmButton.setEnabled(false);
 
-        String sijainti = locationButton.getText().toString().trim();
-        System.out.println("sijainti = " + sijainti);
 
         dateButton.setOnClickListener(new View.OnClickListener(){
 
@@ -48,13 +50,16 @@ public class paivaSijainti extends AppCompatActivity {
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
 
+                //Tämä kohta kuuntelee sitä, kun painetaan "lisää laji napia ja
+                //Ottaa sitten vasta tiedon paikasta Sijainti -Stringiin
                 confirmButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        sijainti = locationButton.getText().toString().trim();
                         openMain();
                     }
                 });
-
+                //Tämä aukaisee päivämäärä-näkymän erillisenä "pop-up" ikkunana
                 DatePickerDialog dialog = new DatePickerDialog(paivaSijainti.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth, mDateSetListener, year, month, day);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
@@ -66,17 +71,12 @@ public class paivaSijainti extends AppCompatActivity {
         mDateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                //Kuukauteen tulee lisätä 1, sillä muuten numeroina päivämäärä on yhdellä väärä
             month = month + 1;
             String date = day + "/" + month + "/" + year;
-
-            //Lisätään havaintoihin
-                //testailin näitä mutta jostain syystä aika ei tallennu
-
-                /*Havainto havainto = new Havainto();
-                havainto.setPaiva(day);
-                String aika = havainto.getPaiva() + " " + havainto.getKuukausi() + " " + havainto.getVuosi();
-                Toast.makeText(getApplicationContext(), aika, Toast.LENGTH_SHORT).show();
-*/
+            paiva = day;
+            kuukausi = month;
+            vuosi = year;
             dateButton.setText(date);
             confirmButton.setEnabled(true);
 
@@ -88,7 +88,8 @@ public class paivaSijainti extends AppCompatActivity {
 
     private void openMain() {
         Intent intent = new Intent(this, MainActivity.class);
-        Toast.makeText(this, "Päiva ja Sijainti lisätty! (ei oikeasti vielä)", Toast.LENGTH_SHORT).show();
+        String ilmoitus = "Ajaksi lisättiin: " + paiva + " " + kuukausi + " " + vuosi + ", Ja sijainniksi: " + sijainti + " Sekä lajina on: " + getIntent().getStringExtra("laji");
+        Toast.makeText(this, ilmoitus, Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 
