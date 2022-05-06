@@ -9,24 +9,27 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp">
+        android:layout_marginTop="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp">
+            android:layout_height="match_parent"
+            android:padding="2dp">
 
             <TextView
                 android:id="@+id/havaintoID_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
                 android:text="1"
                 android:textColor="@color/black"
-                android:textSize="40sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.055" />
 
             <TextView
                 android:id="@+id/havaittuLaji_txt"
@@ -34,8 +37,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="sitruunavästäräkki"
-                android:textSize="20sp"
                 android:textColor="@color/black"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/havaintoID_txt"
                 app:layout_constraintTop_toTopOf="@+id/havaintoID_txt" />
@@ -45,8 +48,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
+                android:layout_marginBottom="2dp"
                 android:text="26"
                 android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/havaittuLaji_txt"
                 app:layout_constraintTop_toBottomOf="@+id/havaittuLaji_txt" />
 
@@ -57,6 +63,7 @@
                 android:layout_marginStart="4dp"
                 android:text="05"
                 android:textColor="@color/black"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@+id/paiva_txt"
                 app:layout_constraintStart_toEndOf="@+id/paiva_txt"
                 app:layout_constraintTop_toTopOf="@+id/paiva_txt" />
@@ -68,6 +75,7 @@
                 android:layout_marginStart="5dp"
                 android:text="2022"
                 android:textColor="@color/black"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@+id/Kuukausi_txt"
                 app:layout_constraintStart_toEndOf="@+id/Kuukausi_txt"
                 app:layout_constraintTop_toTopOf="@+id/Kuukausi_txt" />
@@ -79,6 +87,7 @@
                 android:layout_marginStart="8dp"
                 android:text="Kempeleenlahden lintutorni"
                 android:textColor="@color/black"
+                android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@+id/vuosi_txt"
                 app:layout_constraintTop_toTopOf="@+id/vuosi_txt" />
 

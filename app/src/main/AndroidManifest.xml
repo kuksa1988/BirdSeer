@@ -15,6 +15,7 @@
 
         <activity
             android:name=".elamanHavainnot"
+            android:label="Havainnot"
             android:exported="false" />
         <activity
             android:name=".vuodenHavainnot"

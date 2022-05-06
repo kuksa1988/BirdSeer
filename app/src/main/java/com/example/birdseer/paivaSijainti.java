@@ -28,8 +28,7 @@ public class paivaSijainti extends AppCompatActivity {
     private int kuukausi;
     private int vuosi;
     private String sijainti;
-    ArrayList<String> lajinimiArrayList, sijaintiArrayList;
-    ArrayList<Integer> dayArrayList, monthArrayList, yearArrayList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +52,7 @@ public class paivaSijainti extends AppCompatActivity {
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
 
-                //Tämä kohta kuuntelee sitä, kun painetaan "lisää laji napia ja
+                //Tämä kohta kuuntelee sitä, kun painetaan "lisää laji nappia ja
                 //Ottaa sitten vasta tiedon paikasta Sijainti -Stringiin
                 confirmButton.setOnClickListener(new View.OnClickListener() {
                     @Override
