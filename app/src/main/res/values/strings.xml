@@ -5,8 +5,9 @@
     <string name="button_lajivalintavahvista">OK</string>
     <string name="LisaaPvm">Lisää Päivämäärä</string>
     <string name="pp_kk_vvvv">pp/kk/vvvv</string>
-    <string name="valitse_sijainti">Valitse sijainti</string>
+    <string name="valitse_sijainti">Valitse sijainti (vaihtoehtoinen)</string>
     <string name="lisaa_sijainti">lisää sijainti</string>
+    <string name="lisaa_laji_painike">Lisää Laji</string>
     <string-array name="lajit">
         <item>varis</item>
         <item>harakka</item>
