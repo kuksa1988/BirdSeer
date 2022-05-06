@@ -12,6 +12,7 @@
         android:layout_height="749dp"
         android:layout_marginStart="20dp"
         android:background="@drawable/item_backgroundcolor"
+        android:paddingTop="?attr/actionBarSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
