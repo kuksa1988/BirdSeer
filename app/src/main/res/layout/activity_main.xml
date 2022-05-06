@@ -25,9 +25,7 @@
         android:id="@+id/buttonlisaaLaji"
         android:layout_width="324dp"
         android:layout_height="172dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="60dp"
         android:backgroundTint="#87CA89"
         android:text="@string/buttonLisääLaji"
         android:textColor="#121111"
@@ -35,7 +33,6 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/buttonHavainnot"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

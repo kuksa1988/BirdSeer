@@ -10,7 +10,7 @@
         android:id="@+id/recyclerview_elamanHavainnot"
         android:layout_width="402dp"
         android:layout_height="680dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="6dp"
         android:paddingTop="?attr/actionBarSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
