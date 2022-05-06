@@ -14,6 +14,7 @@
             android:exported="false" />
         <activity
             android:name=".vuodenHavainnot"
+            android:label="Havainnot"
             android:exported="false" />
         <activity
             android:name=".paivanHavainnot"
@@ -26,9 +27,11 @@
             android:exported="false" />
         <activity
             android:name=".paivaSijainti"
+            android:label="Lisää päivämäärä ja sijainti"
             android:exported="false" />
         <activity
             android:name=".valitseLajit"
+            android:label="Valitse laji"
             android:exported="false" />
         <activity
             android:name=".mihinLajit"
