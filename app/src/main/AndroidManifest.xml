@@ -9,14 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BirdSeer">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/button_backgroundcolor" />
+
         <activity
             android:name=".elamanHavainnot"
             android:label="Havainnot"
             android:exported="false" />
         <activity
             android:name=".vuodenHavainnot"
-            android:label="Havainnot"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Havainnot" />
         <activity
             android:name=".paivanHavainnot"
             android:exported="false" />
@@ -28,12 +32,12 @@
             android:exported="false" />
         <activity
             android:name=".paivaSijainti"
-            android:label="Lisää päivämäärä ja sijainti"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Lisää päivämäärä ja sijainti" />
         <activity
             android:name=".valitseLajit"
-            android:label="Valitse laji"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Valitse laji" />
         <activity
             android:name=".mihinLajit"
             android:exported="false" />
