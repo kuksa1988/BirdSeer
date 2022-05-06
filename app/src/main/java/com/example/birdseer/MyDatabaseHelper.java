@@ -11,10 +11,10 @@ import androidx.annotation.Nullable;
 public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     private Context context;
-    private static final String DATABASE_NIMI = "LajiKirjasto.db";
+    private static final String DATABASE_NIMI = "HavaintoKirjasto.db";
     private static final int DATABASE_VERSIO = 1;
 
-    private static final String TABLE_NAME = "laji_kirjasto";
+    private static final String TABLE_NAME = "Havainto_luettelo";
     private static final String ID = "_id";
     private static final String LAJI = "laji";
     private static final String VUOSI = "vuosi";
