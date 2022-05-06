@@ -60,7 +60,7 @@ public class valitseLajit extends AppCompatActivity implements RecyclerViewInter
         }
     }
 
-    @Override //klikatesa siirtyy paivaSijaintiin ja lisää havainto-olioon lajin nimen
+    @Override //klikatessa siirtyy paivaSijaintiin ja lisää havainto-olioon lajin nimen
     public void onItemClick(int position) {
         havainto = new Havainto(lajitArrayList.get(position));
         Intent intent = new Intent(this, paivaSijainti.class);

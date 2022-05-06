@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class paivaSijainti extends AppCompatActivity {
@@ -27,6 +28,8 @@ public class paivaSijainti extends AppCompatActivity {
     private int kuukausi;
     private int vuosi;
     private String sijainti;
+    ArrayList<String> lajinimiArrayList, sijaintiArrayList;
+    ArrayList<Integer> dayArrayList, monthArrayList, yearArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
