@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -17,6 +19,14 @@ public class MainActivity extends AppCompatActivity {
 
         Button changeActivityToVuodenHavainnotBTN = findViewById(R.id.buttonHavainnot);
         Button changeActivityToLisaaLajiBTN = findViewById(R.id.buttonlisaaLaji);
+        FloatingActionButton changeActivityToInfo = findViewById(R.id.info);
+
+        changeActivityToInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeActivivityInfo();
+            }
+        });
 
         changeActivityToLisaaLajiBTN.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void changeActivivityInfo() {
+        Intent intent = new Intent (this, info.class);
+        startActivity(intent);
     }
 
     private void changeActivityHavainnot() {
