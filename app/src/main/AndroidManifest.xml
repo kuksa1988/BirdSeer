@@ -16,7 +16,8 @@
         <activity
             android:name=".elamanHavainnot"
             android:label="Havainnot"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".vuodenHavainnot"
             android:exported="false"
@@ -29,15 +30,18 @@
             android:exported="false" />
         <activity
             android:name=".info"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".paivaSijainti"
             android:exported="false"
-            android:label="Lisää päivämäärä ja sijainti" />
+            android:label="Lisää päivämäärä ja sijainti"
+            android:parentActivityName=".valitseLajit"/>
         <activity
             android:name=".valitseLajit"
             android:exported="false"
-            android:label="Valitse laji" />
+            android:label="Valitse laji"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".mihinLajit"
             android:exported="false" />
