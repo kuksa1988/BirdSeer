@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +23,9 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
     private Context context;
     private ArrayList<String> lajiNimiArraytList, sijaintiArrayList;
     private ArrayList<Integer> idArrayList, dayArrayList, monthArraylist, yearArrayList;
+    private ArrayList<Boolean> painettu;
     private ImageView poistaLaji;
+
 
     int position;
 
@@ -41,6 +44,7 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
         this.dayArrayList = dayArrayList;
         this.monthArraylist = monthArraylist;
         this.yearArrayList = yearArrayList;
+
     }
 
     @NonNull
@@ -59,6 +63,20 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
         holder.kuukausi_txt.setText(String.valueOf(monthArraylist.get(position)));
         holder.vuosi_txt.setText(String.valueOf(yearArrayList.get(position)));
         holder.sijainti_txt.setText(String.valueOf(sijaintiArrayList.get(position)));
+        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (holder.poistaLaji.getVisibility() == View.INVISIBLE){
+                    holder.poistaLaji.setVisibility(View.VISIBLE);
+
+                }else {
+                    holder.poistaLaji.setVisibility(View.INVISIBLE);
+
+                }
+
+            }
+        });
 
         //Tämä katsoo, jos roskakorin kuvaa painetaan niin siirrytään poisto pop-up näkymään
         holder.poistaLaji.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +88,10 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
         });
 
 
+    }
+
+    private int currentPosition() {
+        return this.currentPosition();
     }
 
     private void havainnonPoistoDialogi(int position) {
@@ -125,7 +147,7 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-            //Tämä on peruuta
+            //Tämä on peruuta-kohta
 
             }
         });
@@ -143,6 +165,9 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
 
         TextView havaintoID_txt, havaittuLaji_txt, paiva_txt, kuukausi_txt, vuosi_txt, sijainti_txt;
         ImageView poistaLaji;
+        LinearLayout mainLayout;
+
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -153,6 +178,10 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
             vuosi_txt = itemView.findViewById(R.id.vuosi_txt);
             sijainti_txt = itemView.findViewById(R.id.sijainti_txt);
             poistaLaji = itemView.findViewById(R.id.roskakori);
+            mainLayout = itemView.findViewById(R.id.mainLayout);
+            poistaLaji.setVisibility(View.INVISIBLE);
+
+
 
         }
     }
