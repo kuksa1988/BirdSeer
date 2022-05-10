@@ -117,6 +117,7 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
                         monthArraylist.remove(position);
                         yearArrayList.remove(position);
                         notifyItemRemoved(position);
+                        notifyItemRangeChanged(position, getItemCount());
 
                     }
                 });
