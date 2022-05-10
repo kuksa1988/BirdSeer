@@ -68,6 +68,16 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
         }
     }
+    //Tämä toiminto poistaa havainnon, jolla on tietty ID
+    void poistaHavainto(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.delete(TABLE_NAME, "_id=?", new String[]{String.valueOf(id)});
+        if (result == -1){
+            Toast.makeText(context, "Havainnon poistaminen epäonnistui", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "Havainto poistettu", Toast.LENGTH_SHORT).show();
+        }
+    }
 
     Cursor readAllData(){
         String query = "SELECT * FROM " + TABLE_NAME;
