@@ -147,7 +147,7 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-            //Tämä on peruuta-kohta
+                //Tämä on peruuta-kohta
 
             }
         });
