@@ -21,7 +21,7 @@
                 android:id="@+id/havaintoID_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="5dp"
                 android:text="1"
                 android:textColor="@color/black"
@@ -54,7 +54,7 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/havaittuLaji_txt"
+                app:layout_constraintStart_toStartOf="@+id/havaintoID_txt"
                 app:layout_constraintTop_toBottomOf="@+id/havaittuLaji_txt" />
 
             <TextView
