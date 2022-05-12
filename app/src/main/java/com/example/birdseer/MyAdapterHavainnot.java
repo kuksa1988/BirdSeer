@@ -141,6 +141,7 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
                         notifyItemRemoved(position);
                         notifyItemRangeChanged(position, getItemCount());
 
+
                     }
                 });
         builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {

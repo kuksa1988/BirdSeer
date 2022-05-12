@@ -43,6 +43,7 @@ public class elamanHavainnot extends AppCompatActivity {
         recyclerView.setAdapter(myAdapterHavainnot);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        getSupportActionBar().setTitle("Havainnot - " + myAdapterHavainnot.getItemCount());
     }
 
     void storeDataInArrays(){

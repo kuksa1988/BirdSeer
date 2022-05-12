@@ -15,6 +15,7 @@
         android:layout_marginTop="28dp"
         android:text="@string/infoText"
         android:textSize="20sp"
+        android:padding="000dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
