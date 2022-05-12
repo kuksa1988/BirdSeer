@@ -4,15 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vuodenHavainnot">
+    tools:context=".valitseLajit">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_vuodenHavainnot"
+        android:id="@+id/recyclerViewLajit"
+        android:layout_width="435dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/item_backgroundcolor"
         android:paddingTop="?attr/actionBarSize"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+    </androidx.recyclerview.widget.RecyclerView>
 </androidx.constraintlayout.widget.ConstraintLayout>
