@@ -9,46 +9,83 @@
 
     <Button
         android:id="@+id/buttonHavainnot"
-        android:layout_width="324dp"
-        android:layout_height="172dp"
-        android:layout_marginBottom="64dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:backgroundTint="#87CA89"
         android:text="@string/buttonHavainnot"
         android:textColor="#121111"
-        android:textSize="45sp"
+        android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintDimensionRatio="2.5:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
 
     <Button
         android:id="@+id/buttonlisaaLaji"
-        android:layout_width="324dp"
-        android:layout_height="172dp"
-        android:layout_marginBottom="60dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="#87CA89"
         android:text="@string/buttonLisääLaji"
         android:textColor="#121111"
-        android:textSize="45sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/buttonHavainnot"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintDimensionRatio="2.5:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline2" /><![CDATA[
+
+    >
+
+    ]]>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="12dp"
         android:layout_marginBottom="44dp"
         android:backgroundTint="#87CA89"
         android:clickable="true"
         app:layout_constraintBottom_toTopOf="@+id/buttonlisaaLaji"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.906"
+        app:layout_constraintStart_toStartOf="@id/guideline6"
         app:srcCompat="@android:drawable/ic_dialog_info"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

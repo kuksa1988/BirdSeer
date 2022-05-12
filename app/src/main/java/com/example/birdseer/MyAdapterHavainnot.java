@@ -57,7 +57,7 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.havaintoID_txt.setText(String.valueOf(idArrayList.get(position)));
+       // holder.havaintoID_txt.setText(String.valueOf(idArrayList.get(position)));
         holder.havaittuLaji_txt.setText(String.valueOf(lajiNimiArraytList.get(position)));
         holder.paiva_txt.setText(String.valueOf(dayArrayList.get(position)));
         holder.kuukausi_txt.setText(String.valueOf(monthArraylist.get(position)));
@@ -172,7 +172,7 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            havaintoID_txt = itemView.findViewById(R.id.havaintoID_txt);
+            //havaintoID_txt = itemView.findViewById(R.id.havaintoID_txt);
             havaittuLaji_txt = itemView.findViewById(R.id.havaittuLaji_txt);
             paiva_txt = itemView.findViewById(R.id.paiva_txt);
             kuukausi_txt = itemView.findViewById(R.id.Kuukausi_txt);
