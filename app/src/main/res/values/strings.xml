@@ -3,19 +3,19 @@
     <string name="buttonHavainnot">HAVAINNOT</string>
     <string name="buttonLisääLaji">LISÄÄ LAJI</string>
     <string name="button_lajivalintavahvista">OK</string>
-    <string name="LisaaPvm">Lisää Päivämäärä</string>
+    <string name="LisaaPvm">\nLisää Päivämäärä</string>
     <string name="pp_kk_vvvv">pp/kk/vvvv</string>
-    <string name="valitse_sijainti">Valitse sijainti</string>
+    <string name="valitse_sijainti">\nValitse sijainti</string>
     <string name="lisaa_sijainti"><b>Lisää sijainti</b></string>
     <string name="lisaa_laji_painike">Lisää Laji</string>
-    <string name="infoText">Havainnon lisääminen:\n
+    <string name="infoText"><b>Havainnon lisääminen:</b>\n
 1. Valitse "LISÄÄ LAJI"\n
 2. Etsi havaitsemasi laji listalta ja paina sitä\n
 3. Lisää päivämäärä painamalla "pp/kk/vvvv" painiketta ja aseta päivämäärä kohdilleen rullien avulla\n
 4. Lisää sijainti painamalla lisää sijainti ja kirjoita sijainti. (vapaaehtoinen)\n
 5. Paina LISÄÄ LAJI ja havainto on tallennettu\n
 
-\nHavaintojen tarkastelu/poistaminen:\n
+        \n<b>Havaintojen tarkastelu/poistaminen:</b>\n
 1. Valitse HAVAINNOT\n
 2. Selaa havaintoja\n
 3. Paina havaintoa, jonka haluat poistaa\n

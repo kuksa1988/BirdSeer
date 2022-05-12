@@ -11,8 +11,7 @@
         style="?android:spinnerStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/btn_background"
-        android:backgroundTint="@color/btn_background"
+        android:layout_marginBottom="8dp"
         android:hint="@string/pp_kk_vvvv"
         android:minHeight="48dp"
         android:textAlignment="center"
@@ -45,10 +44,8 @@
         android:layout_height="0dp"
         android:hint="@string/lisaa_sijainti"
         android:inputType="text"
-        android:minHeight="48dp"
         android:textSize="24sp"
         android:textAlignment="center"
-        android:background="@color/btn_background"
         app:layout_constraintBottom_toTopOf="@+id/lisaaLaji"
         app:layout_constraintDimensionRatio="4:1"
         app:layout_constraintEnd_toEndOf="@id/guidelinePvmVerticalRight"
@@ -60,7 +57,7 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/white"
+        android:background="@color/vaalean_vihrea"
         android:text="@string/LisaaPvm"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -76,15 +73,17 @@
         android:id="@+id/textView11"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/white"
+        android:layout_marginBottom="1dp"
+        android:background="@color/vaalean_vihrea"
         android:text="@string/valitse_sijainti"
+        android:textAlignment="center"
         android:textColor="#100E0E"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/sijaintibutton"
         app:layout_constraintDimensionRatio="4:1"
         app:layout_constraintEnd_toEndOf="@id/guidelinePvmVerticalRight"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guidelinePvmVertLeft"
         app:layout_constraintTop_toBottomOf="@+id/datePickerButton" />
 
@@ -93,26 +92,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.10" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelinePvmVerticalRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.90" />
+        app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelinePvmBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.90" />
+        app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelinePvmTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.10" />
+        app:layout_constraintGuide_percent="0.05" />
 </androidx.constraintlayout.widget.ConstraintLayout>
