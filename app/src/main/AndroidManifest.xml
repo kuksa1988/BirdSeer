@@ -19,16 +19,6 @@
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
         <activity
-            android:name=".vuodenHavainnot"
-            android:exported="false"
-            android:label="Havainnot" />
-        <activity
-            android:name=".paivanHavainnot"
-            android:exported="false" />
-        <activity
-            android:name=".havaintoValikko"
-            android:exported="false" />
-        <activity
             android:name=".info"
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
@@ -42,9 +32,6 @@
             android:exported="false"
             android:label="Valitse laji"
             android:parentActivityName=".MainActivity"/>
-        <activity
-            android:name=".mihinLajit"
-            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
