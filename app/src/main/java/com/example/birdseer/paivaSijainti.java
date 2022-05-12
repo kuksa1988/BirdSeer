@@ -91,12 +91,26 @@ public class paivaSijainti extends AppCompatActivity {
     private void openMain() {
 
         MyDatabaseHelper myDB = new MyDatabaseHelper(paivaSijainti.this);
-        myDB.lisaaLaji(getIntent().getStringExtra("laji"), sijainti, vuosi, kuukausi, paiva);
-
+        Calendar cal = Calendar.getInstance();
+        int month = cal.get(Calendar.MONTH) + 1;
         Intent intent = new Intent(this, MainActivity.class);
-        //String ilmoitus = "Ajaksi lisättiin: " + paiva + " " + kuukausi + " " + vuosi + ", Ja sijainniksi: " + sijainti + " Sekä lajina on: " + getIntent().getStringExtra("laji");
-        //Toast.makeText(this, ilmoitus, Toast.LENGTH_SHORT).show();
-        startActivity(intent);
+
+        if (vuosi > cal.get(Calendar.YEAR)) {
+            Toast.makeText(this, "Lisääminen epäonnistui (vuosi)", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
+        } else if (vuosi == cal.get(Calendar.YEAR) && (kuukausi > month)) {
+            Toast.makeText(this, "Lisääminen epäonnistui (kuukausi)", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
+        } else if (vuosi == cal.get(Calendar.YEAR) && (kuukausi == month) && (paiva > cal.get(Calendar.DAY_OF_MONTH))) {
+            Toast.makeText(this, "Lisääminen epäonnistui (päivä)", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
+        } else {
+            myDB.lisaaLaji(getIntent().getStringExtra("laji"), sijainti, vuosi, kuukausi, paiva);
+
+            //String ilmoitus = "Ajaksi lisättiin: " + paiva + " " + kuukausi + " " + vuosi + ", Ja sijainniksi: " + sijainti + " Sekä lajina on: " + getIntent().getStringExtra("laji");
+            //Toast.makeText(this, ilmoitus, Toast.LENGTH_SHORT).show();
+            startActivity(intent);
+        }
     }
 
 }
