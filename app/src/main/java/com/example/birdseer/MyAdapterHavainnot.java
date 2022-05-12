@@ -1,5 +1,6 @@
 package com.example.birdseer;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -56,7 +57,7 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
        // holder.havaintoID_txt.setText(String.valueOf(idArrayList.get(position)));
         holder.havaittuLaji_txt.setText(String.valueOf(lajiNimiArraytList.get(position)));
         holder.paiva_txt.setText(String.valueOf(dayArrayList.get(position)));
@@ -111,8 +112,8 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setCancelable(true);
         builder.setTitle("Havainnon poistaminen");
-        String viesti = "Haluatko varmasti poistaa havainnon: " + "<br>" + "<b>" + id +
-                ". " + lajinimi +
+        String viesti = "Haluatko varmasti poistaa havainnon: " + "<br>" + "<b>"
+                + lajinimi +
                 ", " + paiva +
                 "." + kuukausi +
                 "." + vuosi +

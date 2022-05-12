@@ -16,7 +16,7 @@
         android:minHeight="48dp"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="36dp"
+        android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/textView11"
         app:layout_constraintDimensionRatio="4:1"
