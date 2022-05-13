@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+//Tämä luokka sisältää päävalikon toiminnallisuuden
 public class MainActivity extends AppCompatActivity {
 
 
@@ -44,17 +45,17 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void changeActivivityInfo() {
+    private void changeActivivityInfo() { //klikatessa siirtää info-näkymään
         Intent intent = new Intent (this, info.class);
         startActivity(intent);
     }
 
-    private void changeActivityHavainnot() {
+    private void changeActivityHavainnot() { //klikatessa siirtää havainnot-näkymään
         Intent intent = new Intent (this, elamanHavainnot.class);
         startActivity(intent);
     }
 
-    private void changeActivityLisaaLaji() {
+    private void changeActivityLisaaLaji() { //klikatessa siirtää lajinlisäys-näkymään
         Intent intent = new Intent(this, valitseLajit.class);
         startActivity(intent);
     }
