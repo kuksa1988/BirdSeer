@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
+//Tämä luokka luo recyclerview:n ja hakee siihen lisättävät tiedot tietokannasta
 public class elamanHavainnot extends AppCompatActivity {
 
     RecyclerView recyclerView;
@@ -36,7 +36,7 @@ public class elamanHavainnot extends AppCompatActivity {
         havainnonSijaintiArrayList = new ArrayList<>();
 
         storeDataInArrays();
-
+                                            //Annetaan arraylistit joissa tietokannan tiedot konstruktorille
         myAdapterHavainnot = new MyAdapterHavainnot(this, havaittuLajiArrayList, havainnonSijaintiArrayList,
                 havainnonIdArrayList, havainnonPaivaArrayList, havainnonKkArrayList, havainnonVuosiArrayList);
 
@@ -46,7 +46,7 @@ public class elamanHavainnot extends AppCompatActivity {
         getSupportActionBar().setTitle("Havainnot - " + myAdapterHavainnot.getItemCount() + " yhteensä");
     }
 
-    void storeDataInArrays(){
+    void storeDataInArrays(){  //luetaan tietokannan tiedot arraylisteihin
         Cursor cursor = myDB.readAllData();
         if(cursor.getCount() == 0){
             Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();

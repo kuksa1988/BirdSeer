@@ -18,7 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-
+//Tämä luokka tekee recyclerviewiin sisällön
 public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.MyViewHolder> {
 
     private Context context;
@@ -29,7 +29,7 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
 
 
     int position;
-
+            //konstruktorille annetaan arraylistit joissa tietokannan data
     public MyAdapterHavainnot(Context context,
                               ArrayList<String> lajiNimiArraytList,
                               ArrayList<String> sijaintiArrayList,
@@ -49,16 +49,16 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
     }
 
     @NonNull
-    @Override
+    @Override //luodaan recylcerviewin näkymä.
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.my_row_havainnot, parent, false);
         return new MyViewHolder(view);
     }
 
-    @Override
+    @Override //tiedot jotka näytetään recyclerview:n listan itemissä. Tiedot saadaan arraylisteistä
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
-       // holder.havaintoID_txt.setText(String.valueOf(idArrayList.get(position)));
+        //holder.havaintoID_txt.setText(String.valueOf(idArrayList.get(position)));
         holder.havaittuLaji_txt.setText(String.valueOf(lajiNimiArraytList.get(position)));
         holder.paiva_txt.setText(String.valueOf(dayArrayList.get(position)));
         holder.kuukausi_txt.setText(String.valueOf(monthArraylist.get(position)));
@@ -158,14 +158,14 @@ public class MyAdapterHavainnot extends RecyclerView.Adapter<MyAdapterHavainnot.
         dialog.show();
     }
 
-    @Override
+    @Override //Palauttaa arraylistin pituuden, jonka perusteella luodaan recyclerview:n rivien määrä.
     public int getItemCount() {
         return idArrayList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView havaintoID_txt, havaittuLaji_txt, paiva_txt, kuukausi_txt, vuosi_txt, sijainti_txt;
+        TextView havaittuLaji_txt, paiva_txt, kuukausi_txt, vuosi_txt, sijainti_txt;
         ImageView poistaLaji;
         LinearLayout mainLayout;
 

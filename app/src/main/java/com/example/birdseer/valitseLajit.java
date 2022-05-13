@@ -24,7 +24,6 @@ public class valitseLajit extends AppCompatActivity implements RecyclerViewInter
 
     RecyclerView recyclerViewLajit;
     private ArrayList<String> lajitArrayList;
-    String havainto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +61,10 @@ public class valitseLajit extends AppCompatActivity implements RecyclerViewInter
 
     @Override //klikatessa siirtyy paivaSijaintiin ja lisää havainto-olioon lajin nimen
     public void onItemClick(int position) {
-        havainto = (lajitArrayList.get(position));
+        String havaittulaji = lajitArrayList.get(position);
         Intent intent = new Intent(this, paivaSijainti.class);
-        intent.putExtra("laji", havainto);
+        intent.putExtra("laji", lajitArrayList.get(position));
         startActivity(intent);
-        Toast.makeText(this, havainto, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, havaittulaji, Toast.LENGTH_SHORT).show();
     }
 }
