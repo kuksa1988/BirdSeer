@@ -96,20 +96,16 @@ public class paivaSijainti extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
 
         if (vuosi > cal.get(Calendar.YEAR)) {
-            Toast.makeText(this, "Lisääminen epäonnistui (vuosi)", Toast.LENGTH_SHORT).show();
-            startActivity(intent);
+            Toast.makeText(this, "Lisääminen epäonnistui (Virheellinen vuosi)", Toast.LENGTH_SHORT).show();
         } else if (vuosi == cal.get(Calendar.YEAR) && (kuukausi > month)) {
-            Toast.makeText(this, "Lisääminen epäonnistui (kuukausi)", Toast.LENGTH_SHORT).show();
-            startActivity(intent);
+            Toast.makeText(this, "Lisääminen epäonnistui (Virheellinen kuukausi)", Toast.LENGTH_SHORT).show();
         } else if (vuosi == cal.get(Calendar.YEAR) && (kuukausi == month) && (paiva > cal.get(Calendar.DAY_OF_MONTH))) {
-            Toast.makeText(this, "Lisääminen epäonnistui (päivä)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Lisääminen epäonnistui (Virheellinen päivä)", Toast.LENGTH_SHORT).show();
+        } else if (sijainti.matches("^[A-Za-zÀ-ÖØ-öø-ÿ-Z0-9_ ]*")) {
+            myDB.lisaaLaji(getIntent().getStringExtra("laji"), sijainti, vuosi, kuukausi, paiva);
             startActivity(intent);
         } else {
-            myDB.lisaaLaji(getIntent().getStringExtra("laji"), sijainti, vuosi, kuukausi, paiva);
-
-            //String ilmoitus = "Ajaksi lisättiin: " + paiva + " " + kuukausi + " " + vuosi + ", Ja sijainniksi: " + sijainti + " Sekä lajina on: " + getIntent().getStringExtra("laji");
-            //Toast.makeText(this, ilmoitus, Toast.LENGTH_SHORT).show();
-            startActivity(intent);
+            Toast.makeText(this, "Lisääminen epäonnistui (Virheellinen sijainti)", Toast.LENGTH_SHORT).show();
         }
     }
 
